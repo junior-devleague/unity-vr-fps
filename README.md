@@ -230,22 +230,27 @@ public class PlayerShootingController : MonoBehaviour {
 5.  **WHEN YOU GET TO THIS STEP CALL OVER AN INSTRUCTOR TO HELP YOU DOWNLOAD THE `Mecanim Warrior Anim` FOLDER FROM THIS REPOSITORY**
 6.  From the `Assets Store` search for `Warrior Pack Bundle 1` and `Strong Knight` download and import.
 7.  In the `Project` window, deselect everything, then create a new folder called `Animation`
-8.  Right click the `Animation` folder and select `Create > Animation Controller`
-9.  Drag the following animations into `Animation Controller`:
+8.  Right click the `Animation` folder and select `Create > Animation Controller`. Rename the Animation Controller to `Knight Controller`
+9. Create 3 parameters: bool: `IsPlayerNear`, trigger: `Death`, trigger: `Idle`
+10.  Drag the following animations into `Animation Controller`:
 
 - death from Mecanim Warrior
 - Attack1 from Brute Warrior Mecanim
 - Idle from Brute Warrior Mecanim
 - Run from Brute Warrior Mecanim
 
-10. **WHEN YOU GET TO THIS STEP CALL OVER AN INSTRUCTOR TO HELP YOU WITH THE ANIMATIONS** Your animation flow should look like:
+11. **WHEN YOU GET TO THIS STEP CALL OVER AN INSTRUCTOR TO HELP YOU WITH THE ANIMATIONS** Your animation flow should look like. Right click on the button and select `Make Transition`. To create conditions click the arrow and a screen will appear in the `Inspector` window to create conditions:
+	* Run => Attack (IsPlayerNear = true)
+	* Attack => Run (IsPlayerNear = false)
+	* Any State => Idle (Idle)
+	* Any State => Death (Death)
     ![animation flow](assets/animation-layer.png)
-11. Drag the `Knight` from the prefabs folder into the Scene. Next, drag the `Knight Animation` to the `Knight` object in the `Hierarchy` window.
-12. Add a `Nav Mesh Agent` component to the `Knight`
-13. Open up the Navigation window by going to the top of the screen where File, Edit, Selection, Etc is located. Select `Window > Navigation`. The Navigation window will pop up in the same area as `Inspector`
-14. In the `Bake` hit the `Bake` Button
+12. Drag the `Knight` from the prefabs folder into the Scene. Next, drag the `Knight Animation` to the `Knight` object in the `Hierarchy` window.
+13. Add a `Nav Mesh Agent` component to the `Knight`
+14. Open up the Navigation window by going to the top of the screen where File, Edit, Selection, Etc is located. Select `Window > Navigation`. The Navigation window will pop up in the same area as `Inspector`
+15. In the `Bake` hit the `Bake` Button
     ![bake knight](assets/bake-knight.png)
-15. With the `Knight` selected in the Hierarchy window, create a new script called `EnemyMovement`. Delete and replace the script with the following:
+16. With the `Knight` selected in the Hierarchy window, create a new script called `EnemyMovement`. Delete and replace the script with the following:
 
 ```
 using System.Collections;
