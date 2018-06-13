@@ -30,6 +30,10 @@
 6.  Make sure the `Player` game object is highlighted. Next, create a new script called `PlayerController`. Delete everything in the script and add the following:
 
 ```
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
 public class PlayerController : MonoBehaviour {
 
    public float Speed = 3f;
@@ -173,7 +177,7 @@ public class EnemyHealth : MonoBehaviour {
 
 	public void TakeDamage (float damage) {
 		Health -= damage;
-		if (Health -= 0) {
+		if (Health == 0) {
 			Destroy (gameObject);
 		}
 	}
@@ -280,6 +284,7 @@ public class EnemyMovement : MonoBehaviour {
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 public class EnemyAttack : MonoBehaviour {
 	Animator _animator;
 	GameObject _player;
@@ -318,6 +323,7 @@ public class EnemyAttack : MonoBehaviour {
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 public class EnemyAttack : MonoBehaviour {
 	private Animator _animator;
 	private GameObject _player;
