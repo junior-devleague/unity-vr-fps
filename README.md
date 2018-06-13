@@ -133,7 +133,7 @@ public class PlayerShootingController : MonoBehaviour {
 
 	void Start () {
         _camera = Camera.main;
-        _particle = GetComponentInChildren&lt;ParticleSystem&gt;();
+        _particle = GetComponentInChildren<ParticleSystem>();
         Cursor.lockState = CursorLockMode.Locked;
 }
 
