@@ -108,7 +108,7 @@ public class MouseCameraController : MonoBehaviour {
 ## Setting Up A Weapon
 
 1.  In the Hierarchy window, select `Main Camera`. Next, create a `Cube` 3D Object and rename it to `Gun`
-2.  Change the `Position` to (0.25, -0.5, 1) and the `Scale` to (0, 0.25, .5)
+2.  Change the `Position` to (0.25, -0.5, 1) and the `Scale` to (0.25, 0.25, .5)
 3.  In the `Inspector` window remove the `Box Collider` component from the `Gun` game object. Your window should look like the following:
     ![create gun](assets/create-gun.png)
 4.  Select `Gun` next, right click and select `Effects > Particle System`
