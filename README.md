@@ -245,7 +245,7 @@ public class PlayerShootingController : MonoBehaviour {
 	* Any State => Idle (Idle)
 	* Any State => Death (Death)
     ![animation flow](assets/animation-layer.png)
-12. Drag the `Knight` from the prefabs folder into the Scene. Next, drag the `Knight Animation` to the `Knight` object in the `Hierarchy` window.
+12. Drag the `Knight` from the prefabs folder into the Scene. Next, drag the `Knight Controller` to the `Knight` object in the `Hierarchy` window.
 13. Add a `Nav Mesh Agent` component to the `Knight`
 14. Open up the Navigation window by going to the top of the screen where File, Edit, Selection, Etc is located. Select `Window > Navigation`. The Navigation window will pop up in the same area as `Inspector`
 15. In the `Bake` hit the `Bake` Button
