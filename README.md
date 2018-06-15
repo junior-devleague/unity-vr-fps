@@ -414,6 +414,11 @@ public class EnemyHealth : MonoBehaviour {
 3.  In the `EnemyMovement` script replace with the following:
 
 ```
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.AI;
+
 public class EnemyMovement : MonoBehaviour
 {
     private NavMeshAgent _nav;
